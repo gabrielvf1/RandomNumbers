@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
 
 function App() {
+  const [teste, setTeste] = useState(0);
+  const handleClick = () => {
+    const min = 0;
+    const max = 6;
+    const rand = Math.round(Math.random() * (0 - 6) + 6);
+    setTeste(rand);
+  };
+
+  const [time, setTime] = useState(Date.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => setTime(Date.now()), 1000);
+    handleClick();
+    return () => {
+      clearInterval(interval);
+    };
+  }, [time]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ height: "100%", width: "100%", textAlign: "center" }}>
+      <h4>Random whole number every 5 seconds </h4>
+      <div>{teste}</div>
     </div>
   );
 }
