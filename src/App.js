@@ -12,7 +12,7 @@ function App() {
   const [time, setTime] = useState(Date.now());
 
   useEffect(() => {
-    const interval = setInterval(() => setTime(Date.now()), 1000);
+    const interval = setInterval(() => setTime(Date.now()), 3500);
     handleClick();
     return () => {
       clearInterval(interval);
