@@ -43,7 +43,7 @@ function App() {
   };
 
   const minusNumber = () => {
-    setMin((old) => {
+    setMax((old) => {
       console.log(old);
       return old - 1 >= 0 ? old - 1 : old;
     });
@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div style={{ height: "100%", width: "100%", textAlign: "center" }}>
-      <h4>Random whole number every 5 seconds </h4>
+      <h4>Random Numbers</h4>
       <div>
         <h1>{teste}</h1>
         <button onClick={plusTimer}>+ Tempo</button>
