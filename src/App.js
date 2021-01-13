@@ -22,7 +22,9 @@ function App() {
   return (
     <div style={{ height: "100%", width: "100%", textAlign: "center" }}>
       <h4>Random whole number every 5 seconds </h4>
-      <div>{teste}</div>
+      <div>
+        <h1>{teste}</h1>
+      </div>
     </div>
   );
 }
