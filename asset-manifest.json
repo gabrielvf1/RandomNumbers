@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/RandomNumbers/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/RandomNumbers/static/js/main.ad69268b.chunk.js",
-    "main.js.map": "/RandomNumbers/static/js/main.ad69268b.chunk.js.map",
+    "main.js": "/RandomNumbers/static/js/main.6f485329.chunk.js",
+    "main.js.map": "/RandomNumbers/static/js/main.6f485329.chunk.js.map",
     "runtime-main.js": "/RandomNumbers/static/js/runtime-main.a92a913d.js",
     "runtime-main.js.map": "/RandomNumbers/static/js/runtime-main.a92a913d.js.map",
-    "static/js/2.09e22e09.chunk.js": "/RandomNumbers/static/js/2.09e22e09.chunk.js",
-    "static/js/2.09e22e09.chunk.js.map": "/RandomNumbers/static/js/2.09e22e09.chunk.js.map",
+    "static/js/2.f64d21ce.chunk.js": "/RandomNumbers/static/js/2.f64d21ce.chunk.js",
+    "static/js/2.f64d21ce.chunk.js.map": "/RandomNumbers/static/js/2.f64d21ce.chunk.js.map",
     "static/js/3.3fb7a11a.chunk.js": "/RandomNumbers/static/js/3.3fb7a11a.chunk.js",
     "static/js/3.3fb7a11a.chunk.js.map": "/RandomNumbers/static/js/3.3fb7a11a.chunk.js.map",
     "index.html": "/RandomNumbers/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/RandomNumbers/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.09e22e09.chunk.js.LICENSE.txt": "/RandomNumbers/static/js/2.09e22e09.chunk.js.LICENSE.txt"
+    "static/js/2.f64d21ce.chunk.js.LICENSE.txt": "/RandomNumbers/static/js/2.f64d21ce.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a92a913d.js",
-    "static/js/2.09e22e09.chunk.js",
+    "static/js/2.f64d21ce.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.ad69268b.chunk.js"
+    "static/js/main.6f485329.chunk.js"
   ]
 }
