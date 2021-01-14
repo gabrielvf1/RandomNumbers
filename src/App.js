@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Speech from "react-speech";
 
 function App() {
   const [teste, setTeste] = useState(0);
@@ -15,6 +16,7 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => setTime(Date.now()), timer);
+    // document.querySelector(".rs-play").click();
     handleClick();
     return () => {
       clearInterval(interval);
@@ -62,6 +64,7 @@ function App() {
         <h4>
           Range de Numeros: {min} - {max}
         </h4>
+        <Speech id="teste" text={teste.toString()} />,
       </div>
     </div>
   );
