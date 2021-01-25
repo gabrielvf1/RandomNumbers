@@ -1,27 +1,35 @@
 import { useEffect, useState } from "react";
 import Speech from "react-speech";
+import ToggleButton from "react-toggle-button";
 
 function App() {
   const [teste, setTeste] = useState(0);
   const [timer, setTimer] = useState(3500);
   const [max, setMax] = useState(6);
   const [min, setMin] = useState(0);
+  const [automatic, setAutomatic] = useState(true);
 
   const handleClick = () => {
-    const rand = Math.round(Math.random() * (min - max) + max);
+    let rand = Math.round(Math.random() * (min - max) + max);
+    while (teste === rand) {
+      rand = Math.round(Math.random() * (min - max) + max);
+    }
     setTeste(rand);
   };
 
   const [time, setTime] = useState(Date.now());
 
   useEffect(() => {
-    const interval = setInterval(() => setTime(Date.now()), timer);
-    // document.querySelector(".rs-play").click();
-    handleClick();
+    let interval = 0;
+    if (automatic) {
+      interval = setInterval(() => setTime(Date.now()), timer);
+      // document.querySelector(".rs-play").click();
+      handleClick();
+    }
     return () => {
       clearInterval(interval);
     };
-  }, [time]);
+  }, [time, automatic]);
 
   const plusTimer = () => {
     setTimer((old) => {
@@ -56,11 +64,28 @@ function App() {
       <h4>Random Numbers</h4>
       <div>
         <h1>{teste}</h1>
-        <button onClick={plusTimer}>+ Tempo</button>
-        <button onClick={minusTimer}>- Tempo</button>
-        <h4>Tempo ate Alternar: {timer} ms</h4>
+        {automatic ? (
+          <div>
+            <button onClick={plusTimer}>+ Tempo</button>
+            <button onClick={minusTimer}>- Tempo</button>
+            <h4>Tempo ate Alternar: {timer} ms</h4>
+          </div>
+        ) : null}
         <button onClick={plusNumber}>+ Numeros</button>
         <button onClick={minusNumber}>- Numeros</button>
+        <div
+          style={{ display: "flex", justifyContent: "center", margin: "20px" }}
+        >
+          <ToggleButton
+            value={automatic}
+            onToggle={(value) => {
+              setAutomatic((old) => !old);
+            }}
+          />
+          {!automatic ? (
+            <button onClick={handleClick}> New number</button>
+          ) : null}
+        </div>
         <h4>
           Range de Numeros: {min} - {max}
         </h4>
